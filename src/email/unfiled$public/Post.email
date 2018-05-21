@@ -1,5 +1,0 @@
-Hi {!Contact.Name},
-
-Your post {!Post__c.Id} - {!Post__c.Title__c} has been review and its current status is: {!Post__c.Status__c}.
-
-Thanks and regards.

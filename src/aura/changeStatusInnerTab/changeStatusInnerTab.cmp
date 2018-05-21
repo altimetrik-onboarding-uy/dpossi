@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="postInnerTab">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="recordId" type="String" default=""/>
+    <aura:attribute name="currentStatus" type="string" default=""/>
+    
+    <aura:attribute name="post" type="Post__c"
+                    default="{ 'sobjectType': 'Post__c',
+                            'Name': '',
+                            'Status__c': 'Draft',
+                            'Tags__c': '',
+                            'Title__c': '',
+                    		'Published_Date__c': null,
+                    		'Images__c': '',
+                    		'Content__c': ''}"/>
+
+    
+</aura:component>

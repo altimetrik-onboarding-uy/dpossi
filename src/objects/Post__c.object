@@ -90,15 +90,15 @@
                 <default>true</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Published</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
                 <fullName>Under Review</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Ready</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Published</fullName>
                 <default>false</default>
             </picklistValues>
             <restrictedPicklist>true</restrictedPicklist>

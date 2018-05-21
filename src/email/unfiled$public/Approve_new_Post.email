@@ -1,8 +1,0 @@
-Hi {!User.Manager},
-
-There is a new post ready for review. Please find the details below:
-
-Writer: {!Post__c.WriterId__c} - {!Post__c.Writer__c},
-Title: {!Post__c.Title__c}.
-
-Thanks and regards.
