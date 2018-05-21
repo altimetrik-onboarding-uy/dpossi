@@ -10,6 +10,7 @@
                 var action = component.get("c.saveContent");
                 
                 if(newContentValue != post.Content__c){
+                    post.Content__c = newContentValue;
                     action.setParams({
                         "content": newContentValue,
                         "post": post
@@ -18,6 +19,7 @@
                         var state = response.getState();
                         
                         if(state != 'SUCCESS'){
+                            component.set("v.post", post);
                             console.log('There has been an error while saving the new content.');
                         }
                     });
