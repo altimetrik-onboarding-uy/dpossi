@@ -2,6 +2,7 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:handler event="aura:locationChange" action="{!c.update}"/>
     <ltng:require scripts="{!$Resource.Markdown}"/>
+   
     <aura:attribute name="intervalId" type="Integer" default=""/>
     <aura:attribute name="newContent" type="String" default="" />
     <aura:attribute name="recordId" type="String"/>
@@ -16,10 +17,12 @@
                     		'Published_Date__c': null,
                     		'Images__c': '',
                     		'Content__c': ''}"/>
+
     <div class="slds-grid slds-gutters">
         <div class="slds-col slds-size_6-of-12">
-            <lightning:textarea value="{!v.newContent}" onchange="{!c.onTextUpdated}"
-                                label="Write your article content here"/>
+            <p>"Write your article content here"</p>
+            <textarea id="inputText" oninput="{!c.onTextUpdated}" onkeyup ="{!c.getKeyPressed}">
+            </textarea>
         </div>
         <div class="slds-col slds-size_6-of-12">
             <p>Text formatted</p>

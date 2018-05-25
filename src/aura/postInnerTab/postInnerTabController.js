@@ -10,7 +10,11 @@
             if(state == "SUCCESS"){
                 component.set("v.post", response.getReturnValue());
                 var post = component.get("v.post");
-                component.set("v.newContent", post.Content__c);
+                
+                var texto = document.getElementById("inputText").value = post.Content__c;
+                component.set("v.newContent", texto);
+                component.set("v.textChanged", marked(texto));
+                
                 helper.saveContent(component); 
             }else{
                 console.log("Failed "+ state);
@@ -28,7 +32,16 @@
     },
     
     onTextUpdated: function(component, event, helper){
-        var texto = component.get("v.newContent");
+        var texto = document.getElementById("inputText").value;
+        component.set("v.newContent", texto);
         component.set("v.textChanged", marked(texto));
-    }
+    }, 
+    
+    getKeyPressed :function(component, event, helper) { 
+        console.log("evento "+event);
+        var ctrl = event.ctrlKey;
+        if(ctrl){
+            helper.ctrlPressed(component, event);
+        }
+    } 
 })

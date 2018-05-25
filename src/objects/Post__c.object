@@ -144,6 +144,7 @@
     <label>Post</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
         <columns>Title__c</columns>
         <columns>Published_Date__c</columns>
         <columns>Status__c</columns>
@@ -186,7 +187,7 @@
     <validationRules>
         <fullName>Restriction_in_Ready_Status</fullName>
         <active>true</active>
-        <errorConditionFormula>AND(NOT ISBLANK($User.ManagerId) ,(ISPICKVAL(Status__c, &quot;Ready&quot;)))</errorConditionFormula>
+        <errorConditionFormula>AND(!($User.Id == CreatedBy.ManagerId),(ISPICKVAL(Status__c, &quot;Ready&quot;)))</errorConditionFormula>
         <errorDisplayField>Status__c</errorDisplayField>
         <errorMessage>You are not allow to change the status to &apos;Ready&apos;</errorMessage>
     </validationRules>
