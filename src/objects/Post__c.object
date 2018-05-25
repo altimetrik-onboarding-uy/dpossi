@@ -144,6 +144,7 @@
     <label>Post</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
         <columns>Title__c</columns>
         <columns>Published_Date__c</columns>
         <columns>Status__c</columns>
